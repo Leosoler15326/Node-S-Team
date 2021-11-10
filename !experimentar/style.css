@@ -59,5 +59,47 @@ body{
     color: white;
 }
 .c{
+    display: block;
     background: chartreuse;
+    text-align: center;
+}
+.c h2{
+    margin: 0;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+.sidescroll{
+    display: block;
+    white-space: nowrap;
+    width: 90%;
+    height: 70vh;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.sidescroll::-webkit-scrollbar{
+    background: transparent;
+}
+.sidescroll::-webkit-scrollbar-thumb{
+    background: grey;
+    border-radius: 10px;
+}
+.elemento{
+    display: inline-block;
+    width: 300px;
+    height: 98%;
+    margin: 0 10px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.336);
+    text-decoration: none;
+    color: black;
+}
+.cytus{
+    background: rgb(196, 0, 0);
+}
+.MO{
+    background: rgb(0, 131, 175);
+}
+.deemo{
+    background: #8b4513;
 }
