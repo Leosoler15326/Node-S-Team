@@ -1,7 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     display: block;
     height: 100vh;
-    margin: 0;
 }
 .menu{
     display: flex;
@@ -76,23 +80,28 @@ body{
     margin: 0 auto;
     overflow-x: scroll;
     overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 .sidescroll::-webkit-scrollbar{
     background: transparent;
+    height: 25px;
 }
-.sidescroll::-webkit-scrollbar-thumb{
-    background: grey;
-    border-radius: 10px;
+.sidescroll::-webkit-scrollbar-track{
+    border-left: black 180px solid;
+    border-right: red 180px solid;
 }
 .elemento{
     display: inline-block;
     width: 300px;
     height: 98%;
-    margin: 0 10px;
+    margin: 0 150px;
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.336);
+    background: rgba(0, 0, 0, 0.082);
     text-decoration: none;
     color: black;
+    scroll-snap-align: center;
+    cursor: default;
 }
 .cytus{
     background: rgb(196, 0, 0);
@@ -102,4 +111,10 @@ body{
 }
 .deemo{
     background: #8b4513;
+}
+.Einicio{
+    margin-left: 500px;
+}
+.Efinal{
+    margin-right: 500px;
 }
