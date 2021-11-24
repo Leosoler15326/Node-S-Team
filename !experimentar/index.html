@@ -30,15 +30,25 @@
         </div>
         <div class="parteC parte" id="parteC">
             <h2>Proyectos</h2>
-            <div class="sidescroll">
-                <a href="#" class="cytus elemento Einicio"><h3>Cytus</h3></a>
-                <a href="#" class="MO elemento"><h3>MO: astray</h3></a>
-                <a href="#" class="deemo elemento"><h3>Deemo</h3></a>
-                <a href="#" class="elemento"><h3>otro proyecto</h3></a>
-                <a href="#" class="elemento"><h3>otro proyecto</h3></a>
-                <a href="#" class="elemento Efinal"><h3>otro proyecto</h3></a>
+            <div class="carrusel">
+                <button class="boton_carrusel boton_izquierda boton_oculto">I</button>
+                    <div class="contenedor_track_carrusel">
+                        <ul class="carrusel_track">
+                            <li class="carrusel_slide cytus slide_acutal">CYTUS</li>
+                            <li class="carrusel_slide deemo">DEEMO</li>
+                            <li class="carrusel_slide MO">MO: astray</li>
+                        </ul>
+                    </div>
+                <button class="boton_carrusel boton_derecha">D</button>
+                <div class="navegador_carrusel">
+                    <button class="indicador_carrusel indicador_actual"></button>
+                    <button class="indicador_carrusel"></button>
+                    <button class="indicador_carrusel"></button>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
