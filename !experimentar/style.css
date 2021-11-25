@@ -206,21 +206,22 @@ body{
 /*-----------parte C------------*/
 .parteC{
     display: block;
-    background: rgb(51, 51, 51);
+    background: rgb(32, 32, 32);
     text-align: center;
 }
 .parteC h2{
     margin: 0;
-    padding-top: 10vh;
-    padding-bottom: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
 }
 /* ---      carrusel    ---*/
 .carrusel{
     position: relative;
     margin: 0 auto;
     width: 30%;
-    min-width: 210px;
     height: 72vh;
+    min-width: 210px;
+    max-height: 550px;
 }
 .contenedor_track_carrusel{
     height: 100%;
@@ -234,6 +235,7 @@ body{
     height: 100%;
     transition: transform 0.3s ease-in-out;
 }
+/* slide elementos  < < < < < < < < < */
 .carrusel_slide{
     position: absolute;
     width: 100%;
@@ -243,12 +245,67 @@ body{
     opacity: 0;
     transition: 0.7s;
     transition-delay: 0.15s;
+    overflow: hidden;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: calc(100% + 0px);
+    animation: fondoanimar 3s alternate infinite ease-in-out;
 }
 .slide_acutal{
     top: 0;
     bottom: 0;
     opacity: 1;
 }
+.contenido{
+    padding-top: 1em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.cytus{
+    background-image: url(elementos_PRINCIPAL/cytus_2_logo.png);
+}
+
+.contCytus{
+    background: linear-gradient(rgb(202, 0, 0) 20% , transparent);
+}
+.deemo{
+    background-image: url(elementos_PRINCIPAL/deemo_imagen.jpg);
+}
+.contDeemo{
+    background: linear-gradient(#8b4513 20%, transparent);
+}
+.MO{
+    background-image: url(elementos_PRINCIPAL/giphy.webp);
+}
+.contMo{
+    background: linear-gradient(rgb(0, 131, 175) 20%, transparent);
+}
+.proyecto{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.contenido h3{
+    padding: 3px;
+}
+.contenido p{
+    margin-top: 0;
+    padding: 3px 10px;
+    opacity: 0;
+    backdrop-filter: blur(0em);
+    transition: 1s;
+}
+.slide_acutal p{
+    opacity: 1;
+    backdrop-filter: blur(0.1em);
+    transition-delay: 1s;
+}
+
+@keyframes fondoanimar {
+    100%{
+        background-position-y: calc(100% + 10px);
+    }
+}
+/* FIN slide elementos  < < < < < < < < < */
 .boton_carrusel{
     position: absolute;
     top: 50%;
@@ -326,32 +383,62 @@ body{
     transform: translateY(-4px);
 }
 
-.cytus{
-    background: rgb(196, 0, 0);
-}
-.MO{
-    background: rgb(0, 131, 175);
-}
-.deemo{
-    background: #8b4513;
-}
-.proyecto{
-    background-color: rgba(0, 0, 0, 0.1);
-}
 /*-----------------RESPONSIVE-----------------*/
-@media (max-width: 25em){
+@media (max-width: 30em){
 
     .contenedor{
-        scroll-snap-type: y proximity;
+        scroll-snap-type: y mandatory;
     }
 
+    /*---- PARTE A ----*/
     .parteA .horizontal{
         display: none;
     }
     .parteA .vertical{
         display: block;
-        height: 50%;
+        height: 40%;
         animation: bounce 3s infinite alternate;
     }
 
+    /*---- PARTE C -----*/
+    .parteC h2{
+        padding-top: 7vh;
+        padding-bottom: 3vh;
+    }
+    /*   carrusel   */
+    .carrusel{
+        height: 55vh;
+        width: 55%;
+        min-width: 210px;
+        max-height: 550px;
+    }
+    .boton_carrusel{
+        width: 40px;
+        height: 50px;
+    }
+    .boton_derecha{
+        right: -40px;
+    }
+    .boton_izquierda{
+        left: -40px;
+    }
+    .boton_derecha span{
+        width: 22px;
+        animation: flechasAnimar 4s alternate infinite ease-in-out;
+    }
+    .boton_izquierda span{
+        width: 22px;
+        animation: flechasAnimar 4s alternate infinite ease-in-out;
+    }
+    @keyframes flechasAnimar {
+        100%{
+            transform: translateY(-50%) translateX(-5px) rotate(45deg);
+        }
+    }
+    .contenido{
+        font-size: 0.8em;
+    }
+    .contenido p{
+        margin-top: 1em;
+    }
 }
