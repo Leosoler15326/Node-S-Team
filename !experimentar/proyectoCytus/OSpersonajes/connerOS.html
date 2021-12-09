@@ -25,53 +25,383 @@
             <h2>ConneR OS</h2>
             <div class="contenedorOS">
                 <div class="version">
-                    <h3 class="h3">1.0</h3>
-                    <div class="log documento">
+                    <h3 class="h3" onclick="abrirversion(0)">1.0<span></span></h3>
+
+                    <!--logs-->
+                    <div class="log" id="documento" onclick="abrirLog(0)">
+                        <h4>Log_701_12_14_1</h4>
                     </div>
-                    <div class="log video">
+                    <div class="log" id="video" onclick="abrirLog(1)">
+                        <h4>Cam_Arc_701_12_16</h4>
                     </div>
-                    <div class="log audio">
+                    <div class="log" id="audio" onclick="abrirLog(2)">
+                        <h4>Audio_Raven_701_12_21</h4>
                     </div>
-                    <div class="log mail">
+                    <div class="log" id="video" onclick="abrirLog(3)">
+                        <h4>Cam_Arc_702_01_30</h4>
                     </div>
-                    <div class="log imagen">
+                    <div class="log" id="audio" onclick="abrirLog(4)">
+                        <h4>Audio_Arc_702_02_05</h4>
                     </div>
-                    <div class="log chat">
+                    <div class="log" id="documento" onclick="abrirLog(5)">
+                        <h4>Log_702_02_14_reparado</h4>
                     </div>
+                    <div class="log" id="audio" onclick="abrirLog(6)">
+                        <h4>Audio_Home_697_07_11</h4>
+                    </div>
+                    <div class="log" id="mail" onclick="abrirLog(7)">
+                        <h4>Mail_iM_702_07_01</h4>
+                    </div>
+
 
                 </div>
                 <div class="version">
-                    <h3 class="h3">1.5</h3>
-                    <div class="log documento">
+                    <h3 class="h3" onclick="abrirversion(1)">1.5<span></span></h3>
+                    
+                    <!-- 
+                        
+                        tipos de log "se cambia la id por la imagen de archivo".
+                        h4 el nombre del log.
+                        dentro de los parentesis debe seguir el numero contando la cantidad de logs..
+                        no importa en que version este y siempre iniciando en 0.
+                    
+                    -->
+                    <div class="log" id="documento" onclick="abrirLog()">
+                        <h4>nombreLog</h4>
                     </div>
-                    <div class="log video">
+                    <div class="log" id="video" onclick="abrirLog()">
+                        <h4>nombreLog</h4>
                     </div>
-                    <div class="log audio">
+                    <div class="log" id="audio" onclick="abrirLog()">
+                        <h4>nombreLog</h4>
                     </div>
-                    <div class="log mail">
+                    <div class="log" id="mail" onclick="abrirLog()">
+                        <h4>nombreLog</h4>
                     </div>
-                    <div class="log imagen">
+                    <div class="log" id="imagen" onclick="abrirLog()">
+                        <h4>nombreLog</h4>
                     </div>
-                    <div class="log chat">
+                    <div class="log" id="chat" onclick="abrirLog()">
+                        <h4>nombreLog</h4>
                     </div>
+
+
                 </div>
                 <div class="version">
-                    <h3 class="h3">1.6</h3>
-                    <div class="log documento">
-                    </div>
-                    <div class="log video">
-                    </div>
-                    <div class="log audio">
-                    </div>
-                    <div class="log mail">
-                    </div>
-                    <div class="log imagen">
-                    </div>
-                    <div class="log chat">
-                    </div>
+                    <h3 class="h3" onclick="abrirversion(2)">1.6<span></span></h3>
+                    
                 </div>
             </div>
         </div>
+        <div class="fondonegro" onclick="cerrarLog()">
+
+            <!-- ____________________ contenido logs ____________________ -->
+
+            <!--ver1 log1 documento-->
+            <div class="contenido_log">
+                <img src="imagenes OS/conner/2566.png" alt="2566" class="imagenArchivo">
+                <p class="textobase">Registro de excavación 7011214_1<br>Ubicación: Ruinas N13A448<br>Profundidad: 33 Metros bajo nivel del mar<br>Geografía: Empinado, sobre todo rocas efusivas<br>tasa de daño del equipo: 3%, permanece en rango seguro</p>
+                <p class="textobase">Registro:</p>
+                <p class="textobase">Entrada_1<br>Según el escaneo del dron, parece que hay una gran estructura debajo de esta área. Si mis especulaciones son correctas, la clave para averiguar el misterio detrás del artefacto de papá es muy probable que este aquí.</p>
+                <p class="textobase">El ambiente está en buenas condiciones</p>
+                <p class="textobase"><em><u>[Detectado: Dispositivo de descenso activado]</u></em></p>
+                <p class="textobase">Encontré un lugar estable para instalar el dispositivo de descenso en el borde de la grieta.</p>
+                <p class="textobase">Entrada_2<br>Cuando estaba descendiendo por la grieta, Alcance a ver un avión de transporte de la A.R.C dando vueltas por el área. Mejor que no se acerque y se meta conmigo. Lo único que hacen estas plagas es llevarse todo lo que hay dentro de las ruinas y entregárselo a sus científicos de tercera clase. Sus "investigaciones" a menudo dan resultados inútiles...</p>
+                <p class="textobase">La tierra se está ablandando; mejor desciendo a la base antes de seguir hablando.</p>
+                <p class="textobase">Fin de la grabación. </p>
+                <p class="textobase">Tiempo de grabación: 701_1214_0545</p>
+            </div>
+            <!--ver1 log2 video-->
+            <div class="contenido_log">
+                <p class="nameCharacter">Sagar</p>
+                <p class="textCharacter">¿Como esta el paciente?</p>
+                <p class="nameCharacter">[Personal médico]</p>
+                <p class="textCharacter">La operación fue exitosa. Signos vitales estables, pero el paciente aun no recupera la conciencia...</p>
+                <p class="sonido">Equipo derribado</p>
+                <img src="imagenes OS/conner/2568.png" alt="2568" class="imagenArchivo">
+                <p class="nameCharacter">[Personal médico]</p>
+                <p class="textCharacter">¡Vaya!</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¡El despertó!</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">¿Dónde estoy? Déjenme ir!</p>
+                <p class="nameCharacter">[Dron medico]</p>
+                <p class="textCharacter">Detectado: paciente emocionalmente inestable.<br>Tratamiento: inyección de sedantes. Dosis: 15%</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">....!</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Por favor cálmese, doctor Neumann. este es el departamento médico de la A.R.C del nodo 08.<br>Hace 28 horas, te encontramos inconsciente y herido en el área prohibida del nodo 13.<br>Después de darle tratamiento médico de emergencia, un avión de transporte lo trajo aquí para una operación completa.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Mi brazo derecho... ¿que... me han hecho...ustedes!?</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Cuando lo encontramos, tenía una fractura inoperable en tu brazo derecho, el ojo derecho gravemente dañado y una pérdida de sangre extrema.<br>Los médicos decidieron que era imposible reconstruir tu brazo, así que instalamos una prótesis biomecánica y un ojo electrónico.<br>En este momento, todavía estamos en proceso de reconstrucción del sistema nervioso. Por favor acuéstese e intenta relajar los músculos.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...quítenme este.... asqueroso pedazo de basura... de encima...</p>
+                <p class="nameCharacter">[Personal médico]</p>
+                <p class="textCharacter">¡Señor! ¡por favor no haga eso! ustedes, ¡sujétenlo!</p>
+                <p class="nameCharacter">[Dron medico]</p>
+                <p class="textCharacter">Detectado: El paciente intenta interrumpir la reconstrucción de la conexión nerviosa.<br>Tratamiento: inyección de sedantes. Dosis: 35%</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">bien, déjenlo dormir un poco. Puede que todavía tenga reacciones emocionales fuertes.<br>Aumenten la sensibilidad de los drones médicos. tendré dos grupos de guardias vigilando la puerta por turnos.</p>
+                <p class="textobase"><em><u>[Repetición finalizada]</u></em></p>
+            </div>
+            <!--ver1 log3 audio-->
+            <div class="contenido_log">
+                <p class="sonido">Se abre puerta</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Colin Neumann junior. Nosotros somos de la oficina de administración del node 08…</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">no hay necesidad de presentaciones. solo díganme porque están aquí.</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Yo soy Raven, agente de la ley de la agencia de administración del node 08. Este es mi compañero Hawk.</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">Siempre supimos que ha estado visitando las áreas prohibidas y llevando a cabo exploraciones ilegales a espaldas de la oficina.<br>Aquí hay un registro de las violaciones de las que fue acusado por la oficina en la última década...</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Raven y hawk... les dolió el cerebro al decidir usar esos nombres en clave?...</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">¿¡Tienes problema con nuestros nombres!? Es mejor que cuides tu boca...</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Nos gustaría preguntarle sobre el reciente incidente en las ruinas N13A448. Espero su colaboración.<br>Esta conversación está siendo grabada.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Tengo que aclarar mi postura. Los ciudadanos no tenemos la obligación de seguir ninguna ley que se estableció después de la A.R.C y que los humanos tomaran el control como administradores.<br>Por lo tanto, el término "ilegal" es bastante.... inapropiado.</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">¿encuentra excusas para sus diversos delitos?<br>Si quiere recordar, eso incluye el traspaso ilegal en zonas prohibidas, la invasión de la propiedad pública dentro de las ruinas y resistencia al arresto por parte de los oficiales de la oficina de administración, entre una larga lista de otros.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">No, hablo en serio, chico. Tengo mis reglas cuando actuó y estas reglas se basan en creencias fundamentales.<br>Lo único que me molesta es que no puedes obligar a los demás a aceptar tu creencia.</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">¡Es más fácil decirlo que hacerlo!</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Tienen que creerme, jóvenes polluelos. Lo que hago es por el sake para su gente.</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">¿¡Que acabas de decir!?</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Hawk, cálmate.<br>Doctor Neumann, ¿podemos hablar de lo que le paso a su brazo derecho?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">A pesar de que mi memoria sigue siendo borrosa, le conté todo a la gente que me dio tratamiento de emergencia en el lugar del accidente.<br>Creo que los drones médicos tomaron cada palabra que dije. no quiero repetirme.</p>
+                <p class="sonido">Bebe te</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">Sr. Neumann! ¡Ahora mismo usted es un criminal con múltiples cargos severos! ¡Le aconsejo que vigile su actitud!</p>
+                <p class="sonido">Taza se rompe</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Hawk! ¡Detente! La manera difícil no funciona con este tipo.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Ustedes dos tienen un gran trabajo en equipo. ¿Estamos haciendo la rutina completa del policía bueno/policía malo ahora?</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">¿Qué demonios es "policía"?</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Es como los civiles llamaban a los agentes de la ley en el pasado.<br>Este tipo es un profesional cuando se trata de cosas del pasado.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">En definitiva, No tengo nada nuevo que contarles a ustedes. Todo está grabado.<br>Ustedes ya pueden ir a repórtales a sus superiores.</p>
+                <p class="nameCharacter">[Hawk]</p>
+                <p class="textCharacter">Tu castigo será emitido muy pronto. ¡ya veremos entonces!</p>
+                <p class="nameCharacter">[Raven]</p>
+                <p class="textCharacter">Le reportare esto a la oficina. Parece que se ha quedado sin trucos esta vez. lo siento.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Despedida, jóvenes polluelos.</p>
+                <p class="sonido">Puerta electrónica</p>
+                <p class="textobase"><em><u>[Repetición finalizada]</u></em></p>
+            </div>
+            <!--ver1 log4 video-->
+            <div class="contenido_log">
+                <p class="sonido">Puerta electrónica</p>
+                <img src="imagenes OS/conner/2571.png" alt="2571" class="imagenArchivo">
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Hola, doctor Neumann. no tuve la oportunidad de presentarme la última vez.<br>yo soy...</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Sr. Sagar, el mejor capitán del equipo de exploración de la A.R.C.<br>pensé que nunca le volvería a ver.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Jaja, realmente usted sabe todo.<br>Escuche sobre el proceso de la oficina.<br>como no tenías intención de cooperar durante el interrogatorio, parece que el juicio no va bien...</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">¿Te refieres a esos dos polluelos?<br>¿Ellos llaman a eso "interrogatorio"?<br>...mis, mis… demasiado jóvenes, demasiados ingenuos.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Doctor, no estoy bromeando.<br>Podría ser condenado a cadena perpetua esta vez.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter"><em>*Risas*</em> Con su actual nivel de comprensión tecnológica, si los administradores realmente quieren tratar de encarcelarme...</p>
+                <p class="sonido">Las esposas se abren</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Tendrán que esforzarse más.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¡Por dios! doctor! ¿qué está haciendo? hay cámaras por aquí cerca. ¡póngaselas!</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¿cómo es que...?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Este tipo de esposas electrónicas fueron diseñadas en el pasado para criminales sin mucho peso en barrios bajos.<br>Funciona en base a las biondas emitidas por la piel. ahora mismo, todo mi brazo derecho es una máquina.<br>Todo lo que hice fue jugar un poco con las esposas de mi brazo izquierdo, y voilá.<br><br>Los administradores de la A.R.C., simplemente están usando la tecnología sin saber cómo funciona.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">...doctor, ¿planeas escaparte de la prisión...?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Ya lo he dicho antes. Los ciudadanos no tenemos la obligación de seguir ninguna ley que se estableció después de que los humanos tomaran el control como administradores.<br>No voy a aceptar mi arresto por tales cargos fabricados.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Realmente es usted un hombre de principios, como dicen los rumores.<br>Voy a ser honesto con usted, he venido aquí para hacer un trato.<br>Puede liberarte de tus cargos criminales y castigos.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Ya me imagino.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¿Que?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter"><em>*Risas*</em> Puedo romper esta basura de esposas con los ojos cerrados.<br>¿Qué te hace pensar que me quede de buena gana en este basurero por varios días?<br>Viniste a tratar de persuadirme para que me uniera a la investigación de la A.R.C. ¿tengo razón?</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Jaja... Realmente predijiste todo. No esperaba menos del doctor.<br>En realidad, la persona que hizo esta propuesta fui yo.<br>Hay mucha gente en la A.R.C. que tiene un profundo respeto hacia ti; Yo soy uno de ellos.<br>Creemos que no mereces estar encerrado así.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">No voy a estarlo de todos modos.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¡Doctor, únase a nosotros! como representante de la A.R.C., le invito oficialmente a unirse a nosotros como asesor.<br>Con esa posición, puede participar en cualquier proyecto que tengamos aquí.<br>Ya sea de investigación o exploración, debe haber un lugar para que usted muestre sus talentos.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Bueno</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Por favor, considérelo detenidamente... ¿eh? ¿acaba de decir "bueno"?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Si, unirme a la A.R.C. era parte de mis planes de todas formas. Estoy muy interesado es esa "cosa" que construyeron en el cielo y lo que esta almacenado en ella.<br>Nunca imagine que tendría mi oportunidad de esta manera.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Los superiores me dijeron "no hay una maldit* manera", pero decidí intentarlo de todas formas.<br>¡Estoy tan contento de que esté de acuerdo!<br><br>Con tu conocimiento académico y tu experiencia de campo, combinado con los recursos y talentos en el cuartel general de la A.R.C., creo que no te decepcionara.</p>                
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter"><em>*risa*</em> No estoy necesariamente de acuerdo con la parte de "talento",<br>Pero ya veremos</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">De todas formas, ¡muchas gracias! esta misma tarde, tendremos a nuestros agentes ocupándose de todos los registros y documentos.<br>Mañana por la mañana, alguien te llevara al centro de presentación para que escuches la guía del recién llegado.<br>Oh, y por favor, vuelve a ponerte las esposas. Me estas poniendo en una situación muy …incómoda.</p>
+                <p class="sonido">Puerta electrónica</p>
+                <p class="textobase"><em><u>[Repetición finalizada]</u></em></p>
+            </div>
+            <!--ver1 log5 audio-->
+            <div class="contenido_log">
+                <p class="sonido">Puerta electrónica</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Doctor, ¿estás haciendo rehabilitación?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Ah, sr. Sagar. buenas tardes.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Como se esperaba del doctor. La escritura es la forma más eficiente de mejorar la compatibilidad de un brazo prostético.<br>¿Cómo se siente tu cuerpo?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Todavía necesita algo de tiempo para adaptarse.<br>Si es posible, me gustaría practicar tocando algunos instrumentos.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Se que el doctor vivió en el node 13 por un tiempo y dejo muchos objetos personales allí.<br>si es necesario, puedo presentar una solicitud para que alguien los traslade hasta aquí, incluyendo sus instrumentos.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Eso sería genial.<br>Tienes mi agradecimiento.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">...doctor, usted no es tan difícil como imagine.<br>Por lo que he oído, se supone que usted es antipático y malhumorado.<br>Pero en realidad, es un caballero muy amable y de voz suave.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Lo que detesto son los administradores y altos rangos del comité de la A.R.C.<br>¿cuál es el punto de enojarme contigo?<br>Como capitán de exploración, me salvaste la vida y me propusiste un trato que me salvo de la cárcel.<br>Debería ser respetuoso y agradecido con usted.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">No digas eso doctor. Realmente no merezco tal cortesía de ti.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Ser bien educado es una orgullosa tradición de la familia Neumann.<br>Estoy más sorprendido de ti.<br>Técnicamente soy un criminal para tu gente.<br>Pero no parecen mostrar ningún desagrado cuando están a mi alrededor.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Personalmente, creo que las contribuciones del doctor a la arqueología y a la tecnología de exploración no pueden ser juzgadas con los conceptos legales tradicionales.<br>Realmente queria seguir una carrera en arqueología también, pero siempre he sido del tipo de persona "musculo sobre cerebro".<br>Mi capacidad física es muy superior a la intelectual, por lo que la exploración se convirtió en mi única opción.<br>La gente como el Dr. Neumann, que son física e intelectualmente capaces, ¡son como dioses para nosotros!</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Joven muchacho, no hay "dioses" en este mundo.<br>hay muchos "humanos" que pretenden ser dioses, así que preferiría que no me llamaras así.</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">Lo siento. Solo queria decirte cuanto te admiro.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Gracias.<br><br>por cierto, creo que la A.R.C. y los administradores pueden ver a tiempo real lo que ve mi ojo derecho. ¿cierto?</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¡Diablos, no! En ese entonces, nos rompíamos el culo tratando de salvarte.<br>No tenemos tiempo para hacer esos trucos baratos. yo estaba allí en persona ¡confía en mí!</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...Esta bien. Aun así, no puedo ocultar el hecho de que me hace sentir bastante incomodo... <br>¿Puedo cubrirlo?</p>
+                <p class="nameCharacter">[Sagar]</p>
+                <p class="textCharacter">¿Eh? Debería estar bien... pero tienes suerte de recuperar la vista.<br>¿Vas a abandonarlo así?</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Es más una cuestión de principios.<br>Tengo mis dudas sobre un mundo visto a través del ojo de una máquina.<br>por lo tanto, prefiero no utilizarlo.</p>
+                <p class="textobase"><em><u>[Repetición finalizada]</u></em></p>
+            </div>
+            <!--ver1 log6 documento-->
+            <div class="contenido_log">
+                <p class="textobase"><em><u>[Datos parcialmente dañados debido a una fuerza externa]</u></em></p>
+                <p class="textobase">Registro de excavación 7011214<br>Ubicación: Ruinas N13A448<br>Profundidad: -41 metros bajo nivel del mar<br>Geografía: Empinado, Sobre todo rocas efusivas<br>Tasa de daño del equipo: 5%, permanece en rango seguro</p>
+                <p class="textobase">Registro:</p>
+                <p class="textobase">Entrada_1<br>Después de un descenso de unos 50 minutos, llegue al fondo de las ruinas.<br>Al igual que en el escaneo del dron, hay un espacio muy grande aquí abajo.<br>Estoy caminando a lo largo de un pasadizo recto que debería ir hacia el centro de la estructura.</p>
+                <p class="textobase">Entrada_2<br>Movimiento en el pilar de la esquina delante de mí.<br>La cosa parece correr hacia el desvió lateral después de descubrirme.<br>¡Estoy persiguiéndola! <br><em><u>[Detección: dispositivo sonar activado]</u></em></p>
+                <p class="textobase">Entrada_3<br>¡Maldita sea! lo perdí.<br>Estoy seguro de que corrió por aquí...<br>Espera un segundo, el sonar detecto algo... ¡UGH! ¡¡mi ojo!!<br>Bastardo... ¿Como es posible? ¿Porque esta esa cosa aquí?...<br><em><u>[detección: usuario dispara pistola]</u></em><br><em><u>[detección: usuario dispara pistola]</u></em><br><em><u>[detección: usuario dispara pistola]</u></em><br>...AHHHHH MI BRAZO!! ¡Tu dios abandonado...!</p>
+                <p class="textobase"><em><u>[El diario se interrumpe por razones desconocidas]</u></em></p>
+                <p class="textobase"><em><u>[el dispositivo de grabación se dañó debido a la fuerza bruta]</u></em></p>
+                <p class="textobase">hora de interrupción: 701_1214_0637</p>
+            </div>
+            <!--ver1 log7 audio-->
+            <div class="contenido_log">
+                <p class="sonido">Timbre de puerta</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Hola, residencia Neumann, ¿cómo puedo...? ¡maestro Colin!</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Grace, ha pasado tiempo.</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Un momento por favor.<br>¡Te abriré las puertas ahora mismo!</p>
+                <p class="sonido">Puerta se abre</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Maestro ¡finalmente volviste!</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Los abrazos pueden esperar; déjame dejar mis cosas primero... woah,<br>¿por qué estas llorando? ¿estas tan conmovida?</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Lo siento. Llevare sus cosas a su habitación.<br>Todo está mas o menos en el lugar donde lo dejaste.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Gracias. ¿Como esta papa?</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">El señor... está bien, pero creo que deberías echarle un vistazo tú mismo.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">¿qué ocurre?</p>
+                <p class="textobase"><em>[>>>Avance rápido>>>]</em></p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...papa?</p>
+                <p class="nameCharacter">[Colin]</p>
+                <p class="textCharacter">....</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...Que es lo que ha pasado?</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Después de que te fueras de casa, el señor empezó a encerrarse en el estudio durante días y días.<br>Al principio todavía comía de la comida que ponía delante de su puerta.<br>Hasta que un día, descubrí que la comida no había sido tocada en un tiempo.<br>Irrumpí en la habitación, solo para encontrarlo colapsado entre montones de datos y piezas de equipo....</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...Y ha permanecido en ese estado desde entonces?</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Si... sigue haciendo movimientos con la boca cuando le doy de comer, pero eso es todo.<br>No tiene ninguna reacción a otra cosas.<br>Solo sigue mirando a la nada como si no tuviera alma.<br>Los doctores tampoco pueden identificar lo que le pasa...</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...Papa, soy yo.</p>
+                <p class="nameCharacter">[Colin]</p>
+                <p class="textCharacter">....</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">¡Padre!</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Lo siento. Pensé que tendría alguna reacción después de verte.<br>No parece que... ¡Maestro, lo siento mucho!<br>Todo... <em>*sniff*</em>...es culpa mía!	<br>Si hubiera cuidado mejor al señor, el no...</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">No te disculpes. Debería haber vuelto antes.<br>Estaba demasiado obsesionado con mis propios logros...<br>Parece que ya ni siquiera tengo la oportunidad de presumir con el...</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Maestro...</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">...Estoy bien. Déjame echar un vistazo al estudio de papa...</p>
+                <p class="textobase"><em>[>>>Avance rápido>>>]</em></p>
+                <p class="sonido">Puerta se abre</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Lo siento, no sé por dónde empezar a organizar todas estas cosas complicadas.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">No importa. Solo déjalo así.</p>
+                <p class="nameCharacter">[Grace]</p>
+                <p class="textCharacter">Ah sí. El señor tenía esto en su mano cuando lo encontré...<br>También hay una carta en el escritorio, creo que está dirigida a usted.</p>
+                <p class="nameCharacter">[ConneR]</p>
+                <p class="textCharacter">Es el chip de la familia Neumann...</p>
+                <p class="sonido">Abre un sobre</p>
+                <p class="textobase"><em><u>[Repetición finalizada]</u></em></p>
+            </div>
+            <!--ver1 log8 mail-->
+            <div class="contenido_log">
+                <div class="textomail">
+                    <p class="mailTema">Tema: [Respuesta a la solicitud de transferencia de cuenta] Transferencia "Colin Neumann jr." a "ConneR"</p>
+                    <p class="mailDe">de: servicio iM</p>
+                    <p class="mailPara">Para: Colin Neumann jr.  </p>
+                </div>
+                <p class="textobase">Querido usuario,<br><br>Basándose en la solicitud de transferencia de la cuenta que presentó hace 24 horas, el sistema ha aceptado la solicitud<br>Se aplicará dentro de 1 hora</p>
+                <p class="textobase">Detalles:<br>Cuenta original: Colin Neumann jr.<br>Cuenta nueva: ConneR<br>Tipo de cuenta: regular, acepta seguidores públicos</p>
+                <p class="textobase">Gracias por usar el sistema de redes sociales de sensaciones completas iM, si hay algún problema, por favor contáctenos.<br>Responderemos a sus preguntas. Gracias</p>
+                <p class="textobase">Saludos cordiales,<br><br>El equipo de redes sociales de sensaciones completas iM</p>
+            </div>
+
+
+
+
+
+
+            <!--
+                dentro del div "contenido_log" se coloca el texto to bonito
+            -->
+
+            <div class="contenido_log">
+
+            </div>
+
+        </div>
+
     </section>
     <script src="OSscript.js"></script>
 </body>

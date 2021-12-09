@@ -108,9 +108,11 @@ section{
     overflow: hidden;
 }
 .version_open{
+    min-height: 6em;
     height: auto;
 }
 .version h3{
+    transition: 0.5s;
     position: absolute;
     text-align: left;
     top: 0;
@@ -120,14 +122,167 @@ section{
     width: 100%;
     cursor: pointer;
 }
-.version  .log{
+.version h3 span{
+    transition: 0.5s;
+    position: absolute;
+    width: 10px;
+    aspect-ratio: 1;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    border-right: rgba(255, 255, 255, 0.7) solid 2px;
+    border-bottom: rgba(255, 255, 255, 0.7) solid 2px;
+}
+.version_open h3{
+    background: rgb(128, 128, 128, 0.2);
+}
+.version_open h3 span{
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-color: white;
+}
+.log{
     display: inline-block;
+    position: relative;
     width: 6em;
     aspect-ratio: 1;
     margin: 5px;
     border-radius: 1em;
-    background: royalblue;
+    background: rgba(255, 0, 0, 0.4);
+    background-position: top;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
 }
+.log h4{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/*---- fondos log ----*/
+#documento{
+    background-image: url(elementosOS/documento.png);
+}
+#video{
+    background-image: url(elementosOS/video.png);
+}
+#audio{
+    background-image: url(elementosOS/audio.png);
+}
+#mail{
+    background-image: url(elementosOS/mail.png);
+}
+#imagen{
+    background-image: url(elementosOS/imagen.png);
+}
+#chat{
+    background-image: url(elementosOS/chat.png);
+}
+/*---- fin fondos log ----*/
+.fondonegro{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1em);
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+.contenido_log{
+    position: absolute;
+    width: 80%;
+    height: 87%;
+    text-align: left;
+    background: rgb(39, 0, 0);
+    border: white solid 2px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    overflow: hidden;
+    color: red;
+    overflow-y: scroll;
+    padding-top: 1em;
+}
+.mostrarFondo{
+    opacity: 1;
+    pointer-events: unset;
+}
+.seleccionado{
+    opacity: 1;
+    pointer-events: unset;
+}
+/*++++++++++++++++++++++++++++        ELEMENTOS DE LOS LOGS       +++++++++++++++++++++++++++++++*/
+
+.imagenArchivo{
+    width: 20em;
+    aspect-ratio: 1.3;
+    margin: 1em;
+}
+.textobase{
+    margin: 0 1em;
+    margin-bottom: 1em;
+    padding: 8px;
+    background: linear-gradient(-90deg, transparent, rgba(0, 0, 0, 0.6));
+    color: rgba(255, 255, 255, 0.7);
+}
+/*documento normal*/
+.nameCharacter{
+    margin: 1em 1em 0 1em;
+    background: linear-gradient(-90deg, black, red);
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+.textCharacter{
+    margin: 0 1em 1em 1em;
+    background: linear-gradient(-90deg, transparent, black);
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+.sonido{
+    margin: 1em;
+    background: linear-gradient(-90deg, red, black);
+    color: white;
+    padding: 10px;
+    border-radius: 1em;
+}
+/*estructura correo*/
+.textomail{
+    margin: 0 1em;
+    margin-bottom: 1em;
+    padding: 8px;
+    background: linear-gradient(-90deg, transparent, rgba(0, 0, 0, 0.6));
+    color: rgba(255, 255, 255, 0.7);
+}
+.textomail p{
+    margin: 1px;
+    margin-bottom: 4px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.textomail .mailDe{
+    display: inline-block;
+    width: 47%;
+    background: rgba(255, 255, 255, 0.05);
+}
+.textomail .mailPara{
+    display: inline-block;
+    width: 47%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
 
 /*--------------------------RESPONSIVE-----------------------*/
 @media (max-width: 30em){

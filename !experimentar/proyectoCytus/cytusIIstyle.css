@@ -110,7 +110,7 @@ section{
 .contenedor_personajes{
     display: block;
     bottom: 0;
-    max-height: 65vh;
+    max-height: 80vh;
     text-align: center;
     overflow-y: scroll;
     background-color: rgba(0, 0, 0, 0.2);
@@ -155,17 +155,75 @@ section{
 }
 /*-----------colores personajes------------------*/
 .paff span{
-    background: linear-gradient(transparent, rgb(64, 149, 206));
+    background: linear-gradient(transparent, rgb(0, 203, 126));
 }
 .neko span{
-    background: linear-gradient(transparent, rgb(212, 0, 89));
+    background: linear-gradient(transparent, rgb(255, 20, 212));
 }
 .robo span{
-    background: linear-gradient(transparent, rgb(44, 46, 187));
+    background: linear-gradient(transparent, rgb(61, 196, 181));
+}
+.ivy span{
+    background: linear-gradient(transparent, rgb(255, 38, 0));
+} 
+.crystal span{
+    background: linear-gradient(transparent, rgb(145, 6, 44));
+}
+.vanessa span{
+    background: linear-gradient(transparent, rgb(35, 178, 162));
+}
+.bobo span{
+    background: linear-gradient(transparent, rgb(27, 201, 26));
+}
+.graff span{
+    background: linear-gradient(transparent, rgb(230, 236, 17));
+}
+.kaf span{
+    background: linear-gradient(transparent, rgb(226, 16, 208));
+}
+.alice span{
+    background: linear-gradient(transparent, rgb(215, 215, 215));
+}
+.hans span{
+    background: linear-gradient(transparent, rgb(46, 46, 46));
+}
+.kizuna span{
+    background: linear-gradient(transparent, rgb(208, 17, 120));
+}
+.ilka span{
+    background: linear-gradient(transparent, rgb(139, 145, 117));
+    }
+.miku span{
+    background: linear-gradient(transparent, rgb(51, 134, 119));
+} 
+.xenon span{
+    background: linear-gradient(transparent, rgb(88, 37, 37));
 }
 .conner span{
-    background: linear-gradient(transparent, rgb(177, 106, 0));
+    background: linear-gradient(transparent, rgb(153, 103, 28));
 }
+.cherry span{
+    background: linear-gradient(transparent, rgb(215, 34, 79));
+}
+.joe span{
+    background: linear-gradient(transparent, rgb(54, 9, 58));
+}
+.sagar span{
+    background: linear-gradient(transparent, rgb(159, 126, 69));
+}
+.rin span{
+    background: linear-gradient(transparent, rgb(20, 87, 0));
+}
+.aroma span{
+    background: linear-gradient(transparent, rgb(0, 144, 121));
+}
+.nora span{
+    background: linear-gradient(transparent, rgb(6, 69, 80));
+}
+.neko2 span{
+    background: linear-gradient(transparent, rgb(170, 74, 162));
+}
+
 /*-----------FIN colores personajes------------------*/
 .personaje:hover span{
     top: 20%;
