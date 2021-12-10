@@ -134,7 +134,7 @@ section{
     cursor: pointer;
     overflow: hidden;
 }
-.personaje span{
+.background{
     position: absolute;
     top: 100%;
     left: 0;
@@ -153,79 +153,89 @@ section{
     transition: 1s;
     width: 100%;
 }
+.no_disponible{
+    position: absolute;
+    width: 120%;
+    height: 1.5em;
+    background-color: red;
+    border: black 2px solid;
+    bottom: 1em;
+    left: -10px;
+    transform: rotate(-20deg);
+}
 /*-----------colores personajes------------------*/
-.paff span{
+.paff .background{
     background: linear-gradient(transparent, rgb(0, 203, 126));
 }
-.neko span{
+.neko .background{
     background: linear-gradient(transparent, rgb(255, 20, 212));
 }
-.robo span{
+.robo .background{
     background: linear-gradient(transparent, rgb(61, 196, 181));
 }
-.ivy span{
+.ivy .background{
     background: linear-gradient(transparent, rgb(255, 38, 0));
 } 
-.crystal span{
-    background: linear-gradient(transparent, rgb(145, 6, 44));
+.crystal .background{
+    background: linear-gradient(transparent, rgb(184, 8, 54));
 }
-.vanessa span{
+.vanessa .background{
     background: linear-gradient(transparent, rgb(35, 178, 162));
 }
-.bobo span{
+.bobo .background{
     background: linear-gradient(transparent, rgb(27, 201, 26));
 }
-.graff span{
+.graff .background{
     background: linear-gradient(transparent, rgb(230, 236, 17));
 }
-.kaf span{
+.kaf .background{
     background: linear-gradient(transparent, rgb(226, 16, 208));
 }
-.alice span{
+.alice .background{
     background: linear-gradient(transparent, rgb(215, 215, 215));
 }
-.hans span{
-    background: linear-gradient(transparent, rgb(46, 46, 46));
+.hans .background{
+    background: linear-gradient(transparent, rgb(63, 63, 63));
 }
-.kizuna span{
+.kizuna .background{
     background: linear-gradient(transparent, rgb(208, 17, 120));
 }
-.ilka span{
+.ilka .background{
     background: linear-gradient(transparent, rgb(139, 145, 117));
     }
-.miku span{
+.miku .background{
     background: linear-gradient(transparent, rgb(51, 134, 119));
 } 
-.xenon span{
+.xenon .background{
     background: linear-gradient(transparent, rgb(88, 37, 37));
 }
-.conner span{
+.conner .background{
     background: linear-gradient(transparent, rgb(153, 103, 28));
 }
-.cherry span{
+.cherry .background{
     background: linear-gradient(transparent, rgb(215, 34, 79));
 }
-.joe span{
+.joe .background{
     background: linear-gradient(transparent, rgb(54, 9, 58));
 }
-.sagar span{
+.sagar .background{
     background: linear-gradient(transparent, rgb(159, 126, 69));
 }
-.rin span{
+.rin .background{
     background: linear-gradient(transparent, rgb(20, 87, 0));
 }
-.aroma span{
+.aroma .background{
     background: linear-gradient(transparent, rgb(0, 144, 121));
 }
-.nora span{
+.nora .background{
     background: linear-gradient(transparent, rgb(6, 69, 80));
 }
-.neko2 span{
+.neko2 .background{
     background: linear-gradient(transparent, rgb(170, 74, 162));
 }
 
 /*-----------FIN colores personajes------------------*/
-.personaje:hover span{
+.personaje:hover .background{
     top: 20%;
     transition-delay: 0.3s;
 }
@@ -250,4 +260,8 @@ section{
     .IM_TL a{
         padding: 10px 7vh;
     }
+    .background{
+        top: 50%;
+    }
+
 }
