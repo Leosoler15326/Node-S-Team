@@ -1,5 +1,6 @@
 const contenedor = document.querySelector('.contenedorOS');
 const versiones = Array.from(contenedor.children);
+const pagina = document.querySelector('.pagina');
 
 const contenedorLogs = document.querySelector('.fondonegro');
 const logs = Array.from(contenedorLogs.children);
@@ -21,7 +22,7 @@ function abrirversion(i){
 }
 
 
-/* 2. abrir el log cuando se le de click y cerrar el log cuando se le de por fuera */
+/* 2. abrir el log cuando se le de click  */
 var actual = 0;
 
 function abrirLog(i){
@@ -34,22 +35,24 @@ function abrirLog(i){
 
     actual = i;
 
+    /*coje la pagina y no dejes que scrollee */
+    pagina.classList.add('no_scroll');
 }
 
+
+/* 2.5 cerrar el log cuando se le de por fuera */
 function cerrarLog(){
 
-    /*coje el fondo y escondelo */
     contenedorLogs.classList.remove('mostrarFondo');
 
     var contador = 0;
 
-    /*coje TODOS los logs uno por uno y cierralos */
     while(contador < logs.length){
 
         logs[contador].classList.remove('seleccionado');
         contador++;
-        /* .....inproductivo pero no se como mas hacerlo matame porfa..... */
     }
     
-
+    /*coje la pagina y dale el scroll */
+    pagina.classList.remove('no_scroll');
 }

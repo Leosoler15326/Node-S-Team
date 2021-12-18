@@ -1,9 +1,18 @@
 body{
     height: 100vh;
+    overflow: none;
+    margin: 0;
+    padding: 0;
+}
+.pagina{
+    height: 100vh;
     overflow-y: scroll;
     margin: 0;
     padding: 0;
     scroll-snap-type: y mandatory;
+}
+.no_scroll{
+    overflow: hidden;
 }
 section{
     display: flex;
@@ -25,6 +34,9 @@ section{
 }
 .aroma{
     background: linear-gradient(80deg, rgb(0, 144, 121) 40%, black);
+}
+.vanessa{
+    background: linear-gradient(80deg, rgb(119, 119, 119) 40%, black);
 }
 /*---------------- FIN COLORES PERSONAJES------------------*/
 
@@ -271,9 +283,9 @@ section{
     pointer-events: unset;
 }
 /*++++++++++++++++++++++++++++        ELEMENTOS DE LOS LOGS       +++++++++++++++++++++++++++++++*/
-
 .contenido_log p{
     font-size: 1.2em;
+    cursor: auto;
 }
 .imagenArchivo{
     width: 20em;
@@ -324,7 +336,6 @@ section{
 /*estructura correo*/
 .textomail{
     margin: 0 1em;
-    margin-bottom: 1em;
     padding: 8px;
     background: linear-gradient(-90deg, transparent, rgba(0, 0, 0, 0.6));
     color: rgba(255, 255, 255, 0.7);
@@ -345,7 +356,87 @@ section{
     width: 47%;
     background: rgba(255, 255, 255, 0.05);
 }
+/*estructura de chat*/
 
+/*
+    Estructura de chat para html.
+
+    --ESTRUCTURA DE LA IZQUIERDA--
+ 
+<div class="mensaje_chat">
+			<div class="foto_hora">
+				<img src="ElementosOS/audio.png" alt="" class="img_perfil_chat">
+				<p class="hora"></p>
+			</div>
+			<div class="contenido_chat">
+				<p class="user_name_chat"></p>
+				<p class="contenido_mensaje_chat"></p>
+			</div>
+		</div>
+
+
+    --ESTRUCTURA DE LA DERECHA-- (parece que el de la derecha no tiene nombre de usuario)
+
+<div class="mensaje_chat">
+			<div class="contenido_chat">
+				<p class="contenido_mensaje_chat"></p>
+			</div>
+            			<div class="foto_hora">
+				<img src="ElementosOS/audio.png" alt="" class="img_perfil_chat">
+				<p class="hora"></p>
+			</div>
+		</div>
+
+*/
+.mensaje_chat{
+    display: flex;
+    margin: 5px 1em;
+    margin-bottom: 2em;
+}
+.mensaje_chat_derecha{
+    text-align: right;
+}
+.foto_hora{
+    text-align: center;
+}
+.img_perfil_chat{
+    width: 3em;
+    aspect-ratio: 1;
+    height: auto;
+    margin: 5px;
+}
+.contenido_log .hora{
+    margin: 0;
+    font-size: .8em;
+}
+.contenido_chat{
+    border-left: red solid 2px;
+    margin: 0 5px;
+    width: 100%;
+}
+.mensaje_chat_derecha .contenido_chat{
+    border-left: none;
+    border-right: red solid 2px;
+}
+.user_name_chat{
+    margin: 0;
+    background-color: red;
+    color: black;
+    width: fit-content;
+    padding: 5px 10px;
+}
+.contenido_mensaje_chat{
+    margin: 0;
+    color: white;
+    padding: 10px;
+    width: 50%;
+}
+.mensaje_chat_derecha .contenido_mensaje_chat{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/*++++++++++++++++++++++++++++    FIN  ELEMENTOS DE LOS LOGS       +++++++++++++++++++++++++++++++*/
 
 /*--------------------------RESPONSIVE-----------------------*/
 @media (max-width: 30em){
@@ -380,5 +471,11 @@ section{
     .info_personaje{
         padding: 2vh 10%;
         opacity: 0.999;
+    }
+    .contenido_mensaje_chat{
+        margin: 0;
+        color: white;
+        padding: 10px;
+        width: auto;
     }
 }
