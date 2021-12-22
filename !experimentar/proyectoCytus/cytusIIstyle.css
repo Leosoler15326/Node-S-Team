@@ -101,11 +101,17 @@ section{
     justify-content: center;
 }
 .IM_TL a{
+    position: relative;
     padding: 25px 10vh;
     border-radius: 5vh;
     margin: 5px;
     margin-top: 0;
     margin-bottom: 10px;
+    overflow: hidden;
+}
+.IM_TL a span{
+    bottom: 0;
+    left: 0;
 }
 .IM_boton{
     background-color: rgb(0, 173, 173);
