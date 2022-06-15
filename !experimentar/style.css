@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: block;
     height: 100vh;
     /*background-image: url(giphy.webp);
@@ -11,15 +12,17 @@ body{
     background-size: 100%;*/
 }
 
+
 /*  contenedor partes */
 
-.contenedor{
+.contenedor {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
-.parte{
+
+.parte {
     display: flex;
     justify-content: center;
     place-items: center;
@@ -29,13 +32,16 @@ body{
     position: relative;
 }
 
+
 /*-----------parte A------------*/
-.parteA{
+
+.parteA {
     background: linear-gradient(30deg, rgb(31, 31, 31), rgb(43, 43, 43), rgb(15, 15, 15), rgb(31, 31, 31));
     /*background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(0.3em);*/
 }
-.parteA .horizontal{
+
+.parteA .horizontal {
     min-width: 300px;
     width: 40%;
     transition: 1s;
@@ -43,23 +49,25 @@ body{
 }
 
 @keyframes bounce {
-    100%{
+    100% {
         transform: translateY(-40px);
         transition: ease;
     }
 }
 
-.parteA .vertical{
+.parteA .vertical {
     display: none;
 }
 
-.parteA .pistaScroll{
+.parteA .pistaScroll {
     position: absolute;
     width: 35px;
     height: 60px;
     bottom: 20px;
+    /* onclick scroll parte B*/
 }
-.pistaScroll::before{
+
+.pistaScroll::before {
     content: '';
     position: absolute;
     width: 15px;
@@ -71,128 +79,148 @@ body{
     transform: translate(-50%, -50%) rotate(45deg);
     animation: pista 1.5s ease-in-out infinite;
 }
-@keyframes pista{
-    0%{
+
+@keyframes pista {
+    0% {
         opacity: 0;
     }
-    30%{
+    30% {
         opacity: 0.3;
     }
-    60%{
+    60% {
         opacity: 0.3;
     }
-    100%{
+    100% {
         opacity: 0;
         top: 90%;
     }
 }
+
+
 /*-----------parte B------------*/
-.parteB{
-    background: linear-gradient(-20deg, rgb(117, 0, 0), rgb(65, 0, 0), rgb(65, 0, 0), rgb(90, 0, 0)) ;
+
+.parteB {
+    background: linear-gradient(-20deg, rgb(117, 0, 0), rgb(65, 0, 0), rgb(65, 0, 0), rgb(90, 0, 0));
     overflow: hidden;
 }
-.animacion{
+
+.animacion {
     display: flex;
     position: absolute;
     height: 100%;
     width: 100%;
     align-items: center;
 }
-.animacion span{
+
+.animacion span {
     position: absolute;
     height: 200%;
     width: 3px;
 }
-.ani1{
+
+.ani1 {
     transform: translateX(-220px);
     animation: animar 80s linear infinite;
     animation-delay: -30s;
 }
-.ani1 span{
+
+.ani1 span {
     background: black;
     transform: rotate(20deg);
     left: 100px;
 }
-.ani2{
+
+.ani2 {
     transform: translateX(-110px);
     animation: animar 50s linear infinite;
     animation-delay: -25s;
 }
-.ani2 span{
+
+.ani2 span {
     background: rgb(92, 0, 0);
     transform: rotate(10deg);
     left: 50px;
 }
-.ani3{
+
+.ani3 {
     transform: translateX(-340px);
     animation: animar 65s linear infinite;
     animation-delay: -30s;
 }
-.ani3 span{
+
+.ani3 span {
     background: rgb(170, 0, 0);
     transform: rotate(-30deg);
     left: 150px;
 }
-.ani4{
+
+.ani4 {
     transform: translateX(-290px);
     animation: animar 34s linear infinite;
     animation-delay: -23s;
 }
-.ani4 span{
+
+.ani4 span {
     background: rgb(46, 0, 0);
     transform: rotate(-20deg);
     left: 170px;
 }
-.ani5{
+
+.ani5 {
     transform: translateX(-260px);
     animation: animar 47s linear infinite;
     animation-delay: -5s;
 }
-.ani5 span{
+
+.ani5 span {
     background: rgb(78, 0, 0);
     transform: rotate(-10deg);
     left: 200px;
 }
-.ani6{
+
+.ani6 {
     transform: translateX(-260px);
     animation: animar 70s linear infinite;
     animation-delay: -5s;
-    
 }
-.ani6 span{
+
+.ani6 span {
     background: rgb(43, 0, 0);
     transform: rotate(-14deg);
     left: 200px;
 }
-.ani7{
+
+.ani7 {
     transform: translateX(-360px);
     animation: animar 65s linear infinite;
     animation-delay: 20s;
-    
 }
-.ani7 span{
+
+.ani7 span {
     background: rgb(95, 0, 0);
     transform: rotate(-25deg);
     left: 200px;
 }
-.ani8{
+
+.ani8 {
     transform: translateX(-380px);
     animation: animar 80s linear infinite;
     animation-delay: 10s;
-    
 }
-.ani8 span{
+
+.ani8 span {
     background: rgb(24, 0, 0);
     transform: rotate(28deg);
     left: 200px;
 }
+
 @keyframes animar {
-    100%{
+    100% {
         transform: translateX(100%);
     }
 }
 
-.parteB .contenedorTexto{
+.parteB .contenedorTexto {
     text-align: center;
     width: 50%;
     color: white;
@@ -200,17 +228,22 @@ body{
     overflow: hidden;
 }
 
+
 /*-----------parte C------------*/
-.parteC{
+
+.parteC {
     display: block;
     background-color: rgb(20, 20, 20);
     text-align: center;
 }
-.parteC h2{
+
+.parteC h2 {
     color: white;
 }
+
 /* ---      carrusel    ---*/
-.carrusel{
+
+.carrusel {
     position: absolute;
     margin: 0 auto;
     width: 100%;
@@ -220,11 +253,13 @@ body{
     bottom: 6vh;
     transform: translateX(-50%);
 }
-.contenedor_track_carrusel{
+
+.contenedor_track_carrusel {
     height: 100%;
     overflow: hidden;
 }
-.carrusel_track{
+
+.carrusel_track {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -232,12 +267,16 @@ body{
     height: 100%;
     transition: transform 0.3s ease-in-out;
 }
+
+
 /* slide elementos  < < < < < < < < < */
-.carrusel_slide{
+
+.carrusel_slide {
     position: absolute;
     width: 100%;
     top: 0;
     bottom: 0;
+    border-radius: 50px;
     transition: 0.7s;
     transition-delay: 0.15s;
     overflow: hidden;
@@ -246,7 +285,8 @@ body{
     background-position-y: calc(100% + 0px);
     animation: fondoanimar 3s alternate infinite ease-in-out;
 }
-.contenido{
+
+.contenido {
     display: flex;
     flex-direction: column;
     padding-top: 1em;
@@ -254,42 +294,52 @@ body{
     height: 100%;
     top: 0;
 }
-.contenido div{
+
+.contenido div {
     display: block;
 }
-.cytus{
+
+.cytus {
     background-image: url(elementos_PRINCIPAL/cytusHorizontal.jpg);
 }
 
-.contCytus{
-    background: linear-gradient(rgb(202, 0, 0) 20% , transparent);
+.contCytus {
+    background: linear-gradient(rgb(202, 0, 0) 20%, transparent);
 }
-.deemo{
+
+.deemo {
     background-image: url(elementos_PRINCIPAL/deemo_imagen.jpg);
 }
-.contDeemo{
+
+.contDeemo {
     background: linear-gradient(#8b4513 20%, transparent);
 }
-.MO{
+
+.MO {
     background-image: url(elementos_PRINCIPAL/giphy.webp);
 }
-.contMo{
+
+.contMo {
     background: linear-gradient(rgb(0, 131, 175) 20%, transparent);
 }
-.proyecto{
+
+.proyecto {
     background-color: rgba(0, 0, 0, 0.1);
 }
-.contenido h3{
+
+.contenido h3 {
     padding: 3px;
 }
-.contenido p{
+
+.contenido p {
     margin-top: 0;
     padding: 3px 10px;
     opacity: 0;
     transition: 1s;
     margin-bottom: 10px;
 }
-.contenido a{
+
+.contenido a {
     position: relative;
     display: inline-block;
     width: 10em;
@@ -301,7 +351,8 @@ body{
     text-decoration: none;
     overflow: hidden;
 }
-.contenido a span{
+
+.contenido a span {
     position: absolute;
     top: 0;
     left: -20px;
@@ -313,82 +364,87 @@ body{
 }
 
 @keyframes sombra {
-    85%{
+    85% {
         left: -20px;
     }
-    100%{
+    100% {
         left: 120%;
     }
 }
 
-.slide_acutal p{
+.slide_acutal p {
     opacity: 1;
     backdrop-filter: blur(0.1em);
     transition-delay: 1s;
 }
 
 @keyframes fondoanimar {
-    100%{
+    100% {
         background-position-y: calc(100% + 10px);
     }
 }
+
+
 /* FIN slide elementos  < < < < < < < < < */
-.boton_carrusel{
+
+.boton_carrusel {
     position: absolute;
     top: 50%;
-    width: 60px;
-    height: 70px;
+    width: 80px;
+    height: 140px;
     transform: translateY(-50%);
-    background: transparent;
     border: 0;
     cursor: pointer;
     transition: 1s;
 }
-.boton_carrusel span{
+
+.boton_carrusel span {
     position: absolute;
     width: 30px;
     aspect-ratio: 1;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
 }
-.boton_oculto{
+
+.boton_oculto {
     opacity: 0;
     pointer-events: none;
     transform: translateY(20%);
 }
-.boton_izquierda{
+
+.boton_izquierda {
+    background: linear-gradient(-90deg, transparent 10%, rgba(128, 128, 128, 0.5) 80%, rgba(0, 0, 0, 0.7));
     left: 0;
-    border-left: rgba(255, 255, 255, 0.5) solid 1px;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
     z-index: 9999;
 }
-.boton_izquierda span{
-    left: 20px;
-    border-left: black solid 2px;
-    border-bottom: black solid 2px;
+
+.boton_izquierda span {
+    left: 35px;
+    border-left: white solid 2px;
+    border-bottom: white solid 2px;
     animation: flechasAnimar 7s alternate infinite ease-in-out;
 }
-.boton_derecha{
+
+.boton_derecha {
+    background: linear-gradient(90deg, transparent 10%, rgba(128, 128, 128, 0.5) 80%, rgba(0, 0, 0, 0.7));
     right: 0;
-    border-right: rgba(255, 255, 255, 0.5) solid 1px;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
     z-index: 9999;
 }
-.boton_derecha span{
-    right: 15px;
-    border-top: black solid 2px;
-    border-right: black solid 2px;
+
+.boton_derecha span {
+    right: 30px;
+    border-top: white solid 2px;
+    border-right: white solid 2px;
     animation: flechasAnimar 7s alternate infinite ease-in-out;
 }
 
 @keyframes flechasAnimar {
-    100%{
+    100% {
         transform: translateY(-50%) translateX(-10px) rotate(45deg);
     }
 }
-.navegador_carrusel{
+
+.navegador_carrusel {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -398,7 +454,8 @@ body{
     overflow: hidden;
     height: 5vh;
 }
-.indicador_carrusel{
+
+.indicador_carrusel {
     border: white 1px solid;
     width: 5vh;
     height: 5vh;
@@ -407,54 +464,63 @@ body{
     transition: 0.5s;
     color: transparent;
 }
-.indicador_actual{
+
+.indicador_actual {
     border: white 1px solid;
     background: rgba(255, 255, 255);
     width: 30vh;
     color: black;
 }
-.navegador_carrusel button{
+
+.navegador_carrusel button {
     padding: 0;
     margin: 0;
 }
 
-/*-----------------RESPONSIVE-----------------*/
-@media (max-width: 30em){
 
-    .contenedor{
+/*-----------------RESPONSIVE-----------------*/
+
+@media (max-width: 30em) {
+    .contenedor {
         scroll-snap-type: y mandatory;
     }
-
     /*---- PARTE A ----*/
-    .parteA .horizontal{
+    .parteA .horizontal {
         display: none;
     }
-    .parteA .vertical{
+    .parteA .vertical {
         display: block;
         height: 40%;
         animation: bounce 3s infinite alternate;
     }
-
     /*---- PARTE C -----*/
     /*   carrusel   */
     @keyframes flechasAnimar {
-        100%{
+        100% {
             transform: translateY(-50%) translateX(-5px) rotate(45deg);
         }
     }
-    .contenido{
+    .contenido {
         font-size: 0.8em;
     }
-    .contenido p{
+    .contenido p {
         margin-top: 1em;
     }
-    .indicador_actual{
+    .indicador_actual {
         width: 20vh;
         color: black;
     }
-
-
-    .cytus{
+    .cytus {
         background-image: url(elementos_PRINCIPAL/cytus_2_logo.png);
+    }
+    .boton_carrusel {
+        width: 40px;
+        height: 90px;
+    }
+    .boton_izquierda span {
+        left: 17px;
+    }
+    .boton_derecha span {
+        right: 15px;
     }
 }
