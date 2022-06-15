@@ -25,7 +25,7 @@ function abrirversion(i){
 /* 2. abrir el log cuando se le de click  */
 var actual = 0;
 
-function abrirLog(i){
+function abrirLog(i) {
 
     /*coje el fondo y muestralo */
     contenedorLogs.classList.add('mostrarFondo');
@@ -40,19 +40,15 @@ function abrirLog(i){
 }
 
 
-/* 2.5 cerrar el log cuando se le de por fuera */
-function cerrarLog(){
+/* 2.5 cerrar el log cuando se le de por fuera (se cierra dando click donde sea ayuda po favo)*/
+function cerrarLog() {
 
+    /* coje el fondo y ocultalo */
     contenedorLogs.classList.remove('mostrarFondo');
 
-    var contador = 0;
+    /* coje el numero del log abierto y cierra el contenido en esa posicion*/
+    logs[actual].classList.remove('seleccionado');
 
-    while(contador < logs.length){
-
-        logs[contador].classList.remove('seleccionado');
-        contador++;
-    }
-    
     /*coje la pagina y dale el scroll */
     pagina.classList.remove('no_scroll');
 }
