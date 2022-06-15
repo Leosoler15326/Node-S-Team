@@ -1,0 +1,100 @@
+Para transcribir los Logs de algun personaje a "codigo" para la pagina web toca tener en cuenta
+unas cosas, todo se maneja a base de etiquetas que se ven de la siguiente manera <p></p> una que
+abre ( <p>... ) una que cierra ( ...</p> ) y tienen una "clase" que identificada cada etiqueta.
+
+solo hay que poner el texto dentro de la etiqueta siguiendo el estilo y la logica, muy simple.
+
+---En el caso de una conversacion es asi:
+
+[ConneR]
+... Sasha, ¿estás aquí? Lo siento...
+
+[Sasha]
+... Ya no uso ese nombre.
+
+[ConneR]
+Es el nombre por el que te conozco. Por favor, déjame llamarte así.
+
+
+
+---PASA A SER ASI:
+
+<p class="nameCharacter">[ConneR]</p>
+<p class="textCharacter">... Sasha, ¿estás aquí? Lo siento...</p>
+<p class="nameCharacter">[Sasha]</p>
+<p class="textCharacter">... Ya no uso ese nombre.</p>
+<p class="nameCharacter">[ConneR]</p>
+<p class="textCharacter">Es el nombre por el que te conozco. Por favor, déjame llamarte así.</p>
+
+se puede ver que el texto siempre esta dentro de las dos etiquetas (< ... > [ConneR] < /... >)
+
+
+aca los tipos de etiquetas que se usan en diferentes tipos de Logs:
+
+
+<p class="textobase">  </p>         (texto que no tiene una estructura como tal)
+<p class="nameCharacter">  </p>     (el nombre de alguien en alguna conversacion ..siempre sigue el textCharacter..)
+<p class="textCharacter">  </p>     (lo que dice un personaje, ..siempre despues del nameCharacter..)
+<p class="sonido">  </p>            (un sonido, no hay mucho que explicar)
+
+
+
+<img src="" alt="" class="imagenArchivo">
+(esta etiqueta no se cierra, esta es para poner una imagen que valla dentro del log, 
+ dentro de alt="  " pon el nombre de la imagen que va, yo despues enlazo la imagen) 
+
+
+
+
+
+
+dentro de un e-mail va asi:
+
+<div class="textomail">
+	<p class="mailTema">   </p>         (1)
+        <div>
+        	<p class="mailDe">   </p>   (2)
+        	<p class="mailPara">   </p> (3)
+	</div>
+</div>
+
+el encabezado del correo se llena con el titulo del correo en (1) dentro de mailTema,
+quien envia el correo en (2) dentro de mailDe, y quien recibe el correo en (3) dentro de mailPara.
+(generalmente siempre el contenido del correo va dentro de una etiqueta "textobase")
+
+
+
+un log tipo chat va asi:
+
+<div class="mensaje_chat">
+	<div class="foto_hora">
+		<img src="" alt="" class="img_perfil_chat">  (1)
+		<p class="hora">   </p>                      (2)
+	</div>
+	<div class="contenido_chat">
+		<p class="user_name_chat">   </p>            (3)
+		<p class="contenido_mensaje_chat">   </p>    (4)
+	</div>
+</div>
+
+--O ASI SI EL MENSAJE ESTA A LA DERECHA DE LA PANTALLA
+
+<div class="mensaje_chat mensaje_chat_derecha">
+	<div class="contenido_chat">
+		<p class="contenido_mensaje_chat">   </p>    (4)
+	</div>
+	<div class="foto_hora">
+		<img src="" alt="" class="img_perfil_chat">  (1)
+		<p class="hora">   </p>                      (2)
+	</div>
+</div>
+
+(1): dentro de alt="  " poner el nombre de la foto de perfil (toca esperar a que tengamos las imagenes)
+(2): dentro de hora poner la hora a la que se envio el mensaje con el PM o AM
+(3): dentro de user_name_chat poner el nombre del ususario (en los mensajes de la derecha parece que no hay nombre)
+(4): dentro de contenido_mensaje_chat poner el contenido del mensaje
+
+
+
+
+en caso de que hay un log de video crearlo con un textobase diciendo que hay un video (y si se puede que video)
