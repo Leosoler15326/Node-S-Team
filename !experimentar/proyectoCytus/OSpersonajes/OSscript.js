@@ -7,6 +7,8 @@ const pagina = document.querySelector('.pagina');
 const fondo = document.querySelector('.fondonegro');
 const OScontenidos = document.querySelector('.OScontenidos');
 const logs = Array.from(OScontenidos.children);
+/* contraseña */
+const lock = document.querySelector('.contraseña');
 
 
 /* 1. abrir y cerrar las versiones que se le de click */
@@ -55,4 +57,11 @@ function cerrarLog() {
 
     /*coje la pagina y dale el scroll */
     pagina.classList.remove('no_scroll');
+}
+
+/* 3. si tiene contraseña, desbloquear si se le da click */
+function desbloquear(){
+    logs[actual].classList.remove('no_scroll');
+    /* esconde la ventana de bloqueo */
+    lock.classList.add('escondido');
 }
