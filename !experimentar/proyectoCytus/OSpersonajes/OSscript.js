@@ -1,13 +1,16 @@
+/* versiones en pagina */
 const contenedor = document.querySelector('.contenedorOS');
 const versiones = Array.from(contenedor.children);
 const pagina = document.querySelector('.pagina');
 
-const contenedorLogs = document.querySelector('.fondonegro');
-const logs = Array.from(contenedorLogs.children);
+/* logs en fondo */
+const fondo = document.querySelector('.fondonegro');
+const OScontenidos = document.querySelector('.OScontenidos');
+const logs = Array.from(OScontenidos.children);
 
 
 /* 1. abrir y cerrar las versiones que se le de click */
-
+/* VERSIONES EN LA PAGINA */
 function abrirversion(i){
 
     /*si el elemento cliqueado ya esta abierto cierralo */
@@ -23,12 +26,13 @@ function abrirversion(i){
 
 
 /* 2. abrir el log cuando se le de click  */
+/* LOGS EN EL FONDO NEGRO */
 var actual = 0;
 
 function abrirLog(i) {
 
     /*coje el fondo y muestralo */
-    contenedorLogs.classList.add('mostrarFondo');
+    fondo.classList.add('mostrarFondo');
 
     /*coje el numero de la posion del log cliqueado y abre el contenido en esa posicion */
     logs[i].classList.add('seleccionado');
@@ -44,7 +48,7 @@ function abrirLog(i) {
 function cerrarLog() {
 
     /* coje el fondo y ocultalo */
-    contenedorLogs.classList.remove('mostrarFondo');
+    fondo.classList.remove('mostrarFondo');
 
     /* coje el numero del log abierto y cierra el contenido en esa posicion*/
     logs[actual].classList.remove('seleccionado');
