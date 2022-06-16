@@ -10,6 +10,7 @@ body {
     /*background-image: url(giphy.webp);
     background-repeat: no-repeat;
     background-size: 100%;*/
+    overflow: hidden;
 }
 
 
@@ -477,6 +478,47 @@ body {
     margin: 0;
 }
 
+/* ---------- SIDE MENU ---------------- */
+.sidemenu{
+    display: block;
+    position: absolute;
+    background: linear-gradient(-45deg, rgba(43, 43, 43, 0.4), rgba(0, 0, 0, 0.4), rgba(43, 43, 43, 0.4));
+    backdrop-filter: blur(1em);
+    top: 0;
+    left: -20%;
+    height: 100%;
+    width: 20%;
+    transition: 0.5s ease-out;
+}
+/* menuON despues de resposive */
+.sidemenu div{
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    margin: 20px auto;
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+    overflow: hidden;
+    background-color: rgba(223, 223, 223, 0.2);
+    cursor: pointer;
+}
+.sidemenu div p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sidemenu span{
+    position: absolute;
+    width: 40px;
+    border-radius: 8px;
+    border: white solid 1px;
+    aspect-ratio: 1;
+    bottom: 10px;
+    right: -50px;
+    background: white;
+    cursor: pointer;
+}
+
 
 /*-----------------RESPONSIVE-----------------*/
 
@@ -523,4 +565,13 @@ body {
     .boton_derecha span {
         right: 15px;
     }
+
+    /*side menu*/
+    .sidemenu{
+        left: -60%;
+        width: 60%;
+    }
+}
+.menuON{
+    left: 0;
 }
