@@ -37,7 +37,7 @@ body {
 /*-----------parte A------------*/
 
 .parteA {
-    background: linear-gradient(30deg, rgb(31, 31, 31), rgb(43, 43, 43), rgb(15, 15, 15), rgb(31, 31, 31));
+    background: linear-gradient(30deg, rgb(33, 33, 33), rgb(50, 50, 50), rgb(30, 30, 30), rgb(41, 41, 41));
     /*background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(0.3em);*/
 }
@@ -101,7 +101,7 @@ body {
 /*-----------parte B------------*/
 
 .parteB {
-    background: linear-gradient(-20deg, rgb(117, 0, 0), rgb(65, 0, 0), rgb(65, 0, 0), rgb(90, 0, 0));
+    background: linear-gradient(-20deg, rgb(160, 0, 0), rgb(110, 0, 0), rgb(90, 0, 0), rgb(130, 0, 0));
     overflow: hidden;
 }
 
@@ -234,7 +234,7 @@ body {
 
 .parteC {
     display: block;
-    background-color: rgb(20, 20, 20);
+    background: linear-gradient(35deg, rgb(40, 40, 40), black, rgb(40, 40, 40), black, rgb(40, 40, 40), black, rgb(40, 40, 40), black);
     text-align: center;
 }
 
@@ -305,7 +305,7 @@ body {
 }
 
 .contCytus {
-    background: linear-gradient(rgb(202, 0, 0) 20%, transparent);
+    background: linear-gradient(rgb(200, 0, 0) 20%, transparent);
 }
 
 .deemo {
@@ -344,10 +344,10 @@ body {
     position: relative;
     display: inline-block;
     width: 10em;
-    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(178deg, rgba(0,0,0,0.5), transparent 75%, rgba(255, 255, 255, 0.2));
     margin: 5px;
     padding: 1em;
-    border: black solid 3px;
+    border-top: black solid 2px;
     color: rgb(216, 216, 216);
     text-decoration: none;
     overflow: hidden;
@@ -479,46 +479,78 @@ body {
 }
 
 /* ---------- SIDE MENU ---------------- */
+/* menuON despues de resposive */
 .sidemenu{
     display: block;
     position: absolute;
-    background: linear-gradient(-45deg, rgba(43, 43, 43, 0.4), rgba(0, 0, 0, 0.4), rgba(43, 43, 43, 0.4));
-    backdrop-filter: blur(1em);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(0.4em);
     top: 0;
     left: -20%;
     height: 100%;
     width: 20%;
-    transition: 0.5s ease-out;
+    transition: 0.5s ease-in-out;
+    border-right: rgb(148, 148, 148) solid 2px;
 }
-/* menuON despues de resposive */
-.sidemenu div{
+.sidemenu a{
+    text-decoration: none;
+    color: wheat;
+    display: block;
     text-align: center;
-    width: 80%;
-    height: 80px;
+    width: 75%;
+    height: 70px;
     margin: 20px auto;
     border-top: black solid 2px;
     border-bottom: black solid 2px;
     overflow: hidden;
-    background-color: rgba(223, 223, 223, 0.2);
-    cursor: pointer;
+    background: linear-gradient(90deg, transparent 5%, rgba(223, 223, 223, 0.3), rgba(223, 223, 223, 0.3), transparent 95%);
 }
-.sidemenu div p{
+.sidemenu a p{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+.sidemenu a:hover{
+    background: linear-gradient(90deg, transparent 5%, rgba(223, 223, 223, 0.4), rgba(223, 223, 223, 0.4), transparent 95%);
 }
 .sidemenu span{
     position: absolute;
     width: 40px;
     border-radius: 8px;
-    border: white solid 1px;
+    border: rgba(255, 255, 255, 0.2) solid 2px;
     aspect-ratio: 1;
     bottom: 10px;
     right: -50px;
-    background: white;
     cursor: pointer;
+    transition: 0.5s;
+    transition-delay: 0s;
 }
-
+.sidemenu span div{
+    margin-top: 9px;
+    margin-left: 9px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 20px;
+    aspect-ratio: 1;
+    border-top: rgba(255, 255, 255, 0.5) solid 2px;
+    border-right: rgba(255, 255, 255, 0.5) solid 2px;
+    transition: 0.5s;
+}
+.sidemenu span:hover{
+    border: rgba(255, 255, 255, 0.8) solid 2px;
+    transition: 0.3s ease-out;
+}
+.sidemenu span:hover div{
+    border-top: rgba(255, 255, 255, 0.8) solid 2px;
+    border-right: rgba(255, 255, 255, 0.8) solid 2px;
+}
+.menuON span{
+    right: 10px;
+    transition-delay: 0.2s;
+}
+.menuON span div{
+    transform: rotate(-135deg);
+}
 
 /*-----------------RESPONSIVE-----------------*/
 
