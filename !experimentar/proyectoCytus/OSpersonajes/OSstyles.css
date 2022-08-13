@@ -117,11 +117,23 @@ section{
 }
 /*---FIN boton a pagina principal---*/
 
+/*----------------Para video de fondo------------------*/
 
+.fondodelOS {
+
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+   
+    z-index: -1;
+
+}
 
 /*                        seccion 2                          */
 .seccion2{
-    background: black;
+    background: rgba(95, 21, 21, 0.116);
+
 }
 .otros_botones{
     display: flex;
