@@ -1,13 +1,18 @@
+/* versiones en pagina */
 const contenedor = document.querySelector('.contenedorOS');
 const versiones = Array.from(contenedor.children);
 const pagina = document.querySelector('.pagina');
 
-const contenedorLogs = document.querySelector('.fondonegro');
-const logs = Array.from(contenedorLogs.children);
+/* logs en fondo */
+const fondo = document.querySelector('.fondonegro');
+const OScontenidos = document.querySelector('.OScontenidos');
+const logs = Array.from(OScontenidos.children);
+/* contraseña */
+const lock = document.querySelector('.contraseña');
 
 
 /* 1. abrir y cerrar las versiones que se le de click */
-
+/* VERSIONES EN LA PAGINA */
 function abrirversion(i){
 
     /*si el elemento cliqueado ya esta abierto cierralo */
@@ -23,12 +28,13 @@ function abrirversion(i){
 
 
 /* 2. abrir el log cuando se le de click  */
+/* LOGS EN EL FONDO NEGRO */
 var actual = 0;
 
-function abrirLog(i){
+function abrirLog(i) {
 
     /*coje el fondo y muestralo */
-    contenedorLogs.classList.add('mostrarFondo');
+    fondo.classList.add('mostrarFondo');
 
     /*coje el numero de la posion del log cliqueado y abre el contenido en esa posicion */
     logs[i].classList.add('seleccionado');
@@ -40,19 +46,22 @@ function abrirLog(i){
 }
 
 
-/* 2.5 cerrar el log cuando se le de por fuera */
-function cerrarLog(){
+/* 2.5 cerrar el log cuando se le de por fuera (se cierra dando click donde sea ayuda po favo)*/
+function cerrarLog() {
 
-    contenedorLogs.classList.remove('mostrarFondo');
+    /* coje el fondo y ocultalo */
+    fondo.classList.remove('mostrarFondo');
 
-    var contador = 0;
+    /* coje el numero del log abierto y cierra el contenido en esa posicion*/
+    logs[actual].classList.remove('seleccionado');
 
-    while(contador < logs.length){
-
-        logs[contador].classList.remove('seleccionado');
-        contador++;
-    }
-    
     /*coje la pagina y dale el scroll */
     pagina.classList.remove('no_scroll');
+}
+
+/* 3. si tiene contraseña, desbloquear si se le da click */
+function desbloquear(){
+    logs[actual].classList.remove('no_scroll');
+    /* esconde la ventana de bloqueo */
+    lock.classList.add('escondido');
 }

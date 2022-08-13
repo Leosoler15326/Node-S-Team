@@ -1,0 +1,283 @@
+body{
+    height: 100vh;
+    overflow: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(102, 184, 255);
+}
+.pagina{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+
+
+section{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/*----------------otros botones-------------*/
+.otros_botones{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px auto;
+    margin-left: 20px;
+    height: 87%;
+}
+/*
+        para quienes tengan back up system.
+
+<div class="otros_botones">
+            <a href="" class="IM_boton" >IM system</a>
+            <a href="" class="BU_boton">Back Up System</a>
+        </div>
+
+
+*/
+.otros_botones a{
+    padding: 15px 3em;
+    border-radius: 5vh;
+    color: white;
+    text-decoration: none;
+    border: solid 2px orange;
+}
+
+/*-----------------CONTENEDOR------------------*/
+.contenedor{
+    display: block;
+    width: 80%;
+    height: 90%;
+    margin: 20px auto;
+    border: white solid 1px;
+    overflow-y: scroll;
+    
+}
+.encabezadoIM{
+    background: linear-gradient(90deg, transparent, rgba(128, 128, 128) 80%);
+    position: relative;
+    height: 15%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.perfil{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height: 98%;
+    aspect-ratio: 1;
+    margin: auto 0;
+}
+.perfil img{
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    height: 75%;
+}
+.contenidoCabeza{
+    background: rgba(128, 128, 128, 0.8);
+    width: 80%;
+    display: inline-flex;
+    position: absolute;
+    height: 98%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 5s;
+}
+.encabezadoIM:hover .contenidoCabeza{
+    transition: 5s;
+    background: linear-gradient(90deg, rgb(185, 185, 185), rgba(128, 128, 128));
+}
+.imgCabeza{
+    text-align: center;
+    height: 98%;
+    aspect-ratio: 1;
+}
+.imgCabeza img{
+    margin-top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.titulo{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+.titulo p{
+    padding: 0 10px;
+    margin: auto 0;
+}
+.likes{
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    height: 98%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.imglike{
+    margin: auto 0;
+    height: 20px;
+    aspect-ratio: 1;
+    background-color: black;
+}
+.contlike{
+    margin: auto 0;
+    padding: 5px;
+    color: aliceblue;
+}
+
+/*-----------------FONDO NEGRO-----------------*/
+.fondonegro{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1em);
+    opacity: 0;  /* 0  */
+    pointer-events: none; /* none  */
+    transition: 1s;
+    cursor: pointer;
+}
+.mostrarFondo{
+    opacity: 1;
+    pointer-events: all;
+}
+.IM{
+    position: absolute;
+    width: 80%;
+    height: 87%;
+    text-align: left;
+    background: rgb(59, 95, 255);
+    border-top: white solid 2px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;  /* 0  */
+    pointer-events: none; /* none  */
+    transition: 1s;
+    color: black;
+    padding-top: 1em;
+}
+.seleccionado{
+    opacity: 1;
+    pointer-events: initial;
+}
+/*------------------------------ contenido cuerpo----------------------------------- */
+.perfilCuerpo{
+    margin: 5px;
+    position: absolute;
+    text-align: center;
+    aspect-ratio: 1;
+    width: 100px;
+    top: 0;
+    left: 0;
+}
+.perfilCuerpo img{
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    height: 100%;
+}
+.contenidoCuerpo{
+    position: absolute;
+    margin-left: 110px;
+    padding: 0 15px;
+    height: 100%;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.tituloCuerpo{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.imgCuerpo{
+    margin-top: 2%;
+    width: 50%;
+}
+.imgCuerpo img{
+    width: 100%;
+}
+.descripcion{
+    margin: 2% 20px;
+    width: 80%;
+}
+
+/*  comentario  */
+.comentario{
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.imgComentario{
+    position: absolute;
+    width: 70px;
+    aspect-ratio: 1;
+}
+.imgComentario img{
+    width: 100%;
+}
+.contenidoComentario{
+    margin-left: 80px;
+    padding: 5px;
+    width: 70%;
+}
+
+
+
+
+/*--------------------------RESPONSIVE-----------------------*/
+@media (max-width: 40em){
+
+    .otros_botones{
+        position: absolute;
+        height: 80px;
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+        align-items: center;
+    }
+    .otros_botones a{
+        width: 50%;
+        padding: 0.5em 1em;
+    }
+    .contenedor{
+        margin-top: 100px;
+        height: 80%;
+    }
+    /* likes encabezado*/
+    .imglike{
+        margin: auto 0;
+        margin-bottom: 0;
+    }
+    .contlike{
+        margin: auto 0;
+        margin-bottom: 0;
+    }
+    /* comentario */
+    .contenidoComentario{
+        margin-left: 80px;
+        padding: 5px;
+        width: 50%;
+    }
+}
